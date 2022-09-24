@@ -15,6 +15,10 @@
                 :release {:js-options
                           {:resolve {"react" {:target :npm
                                               :require "preact/compat"}
+                                     "react-dom/test-utils" {:target :npm
+                                                             :require "preact/test-utils"}
+                                     "react/jsx-runtime" {:target :npm
+                                                          :require "preact/jsx-runtime"}
                                      "react-dom" {:target :npm
                                                   :require "preact/compat"}}}}
                 :devtools   {:http-root  "build"
