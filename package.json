@@ -1,0 +1,29 @@
+{
+  "name": "cljs-reagent-reframe-unocss-boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run build:css -- --watch\" \"shadow-cljs watch web\"",
+    "build": "npm run build:js",
+    "build:js": "shadow-cljs release --verbose web",
+    "build:css": "npx unocss \"build/js/**/*.js\" \"build/js/main.js\" --out-file \"build/css/main.css\"",
+    "serve": "serve build"
+  },
+  "devDependencies": {
+    "@unocss/cli": "^0.45.22",
+    "@unocss/preset-uno": "^0.45.22",
+    "@unocss/preset-web-fonts": "^0.45.22",
+    "@unocss/preset-wind": "^0.45.22",
+    "concurrently": "^7.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "serve": "^14.0.1",
+    "shadow-cljs": "^2.20.2",
+    "unocss": "^0.45.22"
+  },
+  "dependencies": {
+    "preact": "^10.11.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.4.1"
+  }
+}
