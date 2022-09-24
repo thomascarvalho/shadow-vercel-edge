@@ -9,6 +9,8 @@
             ["react-helmet" :refer [Helmet]]
             ["react-router-dom" :refer (Route BrowserRouter Outlet NavLink Routes)]))
 
+(def PORT "")
+
 (defn hero []
   (let [name (rf/subscribe [::subs/name])]
     [:div {:class "p-20 rounded text-center shadow-md font-normal font-sans bg-blue-200"}

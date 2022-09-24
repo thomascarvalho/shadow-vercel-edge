@@ -18,5 +18,5 @@
                                      "react-dom" {:target :npm
                                                   :require "preact/compat"}}}}
                 :devtools   {:http-root  "build"
-                             :http-port  5000
+                             :http-port  #shadow/env ["PORT" :as :int :default 5000]
                              :after-load app.core/reload}}}}

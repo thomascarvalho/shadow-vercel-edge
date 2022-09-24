@@ -25,3 +25,4 @@ pom.xml.asc
 .calva/
 .nvmrc
 .clj-kondo
+.vercel
