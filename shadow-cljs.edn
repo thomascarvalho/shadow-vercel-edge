@@ -12,11 +12,11 @@
                 :compiler-options {:output-feature-set :es-next}
                 :js-options {:entry-keys ["module" "browser" "main"]}
                 :dev {:closure-defines {re-frame.trace.trace-enabled? true}}
-                :release {:js-options
-                          {:resolve {"react" {:target :npm
-                                              :require "preact/compat"}
-                                     "react-dom" {:target :npm
-                                                  :require "preact/compat"}}}}
+                ;; :release {:js-options
+                ;;           {:resolve {"react" {:target :npm
+                ;;                               :require "preact/compat"}
+                ;;                      "react-dom" {:target :npm
+                ;;                                   :require "preact/compat"}}}}
                 :devtools   {:http-root  "build"
                              :http-port  #shadow/env ["PORT" :as :int :default 5000]
                              :after-load app.core/reload}}}}
